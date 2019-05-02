@@ -1,0 +1,233 @@
+nav ul {
+  z-index: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  font-size: 30px;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+  color: white;
+  background-color: #111;
+  border-radius: 25px;
+}
+
+.welcome-bg {
+  background-color: white;
+  position: relative;
+  text-align: center;
+  color: black;
+  object-fit: cover;
+}
+
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 5em;
+  font-family: "Titillium Web", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.intro {
+  /*top: 0;*/
+  /*background: white;*/
+  /*position: relative;*/
+  height: 100%;
+  min-height: 100vh;
+  padding-top: 10vh;
+  text-align: center;
+}
+
+.intro p {
+  font-size: 20px;
+}
+
+.my-work {
+  /*top: 0;*/
+  background: White;
+  padding: 5vh 10vh 1vh 10vh;
+  min-height: 100vh;
+  display: grid;
+  font-size: 1.5em;
+  /*width: 100%;*/
+  grid-gap: 20px;
+  grid-template-areas:
+    "work_head"
+    "bpe_area"
+    "dbz_area"
+    "cave_area"
+    "nasa_area"
+    "hack_area";
+}
+
+.work-header {
+  padding-top: 0vh;
+  border-radius: 25px;
+  color: white;
+  grid-area: work_head;
+  background: black;
+}
+
+.work-bpe {
+  padding: 1vh 1vh 1vh 1vh;
+  background: white;
+  grid-area: bpe_area;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-area: "bpe_visuals_area" "bpe_text_area";
+}
+.visuals-bpe {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+}
+
+.work-dbz {
+  padding: 1vh 1vh 1vh 1vh;
+  border-radius: 25px;
+  color: white;
+  background: black;
+  grid-area: dbz_area;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-area: "dbz_visuals_area" "dbz_text_area";
+}
+.visuals-dbz {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.work-cave {
+  padding: 1vh 1vh 1vh 1vh;
+  background: white;
+  grid-area: cave_area;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-area: "cave_visuals_area" "cave_text_area";
+}
+.visuals-cave {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.work-nasa {
+  padding: 1vh 1vh 1vh 1vh;
+  border-radius: 25px;
+  color: white;
+  background: black;
+  grid-area: nasa_area;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-area: "nasa_visuals_area" "nasa_text_area";
+}
+.visuals-nasa {
+  display: grid;
+  grid-template-rows: auto auto auto ;
+}
+
+.desc-vis-nasa{
+  display :grid;
+    grid-template-rows: auto auto;
+}
+
+.work-hack {
+  padding: 1vh 1vh 1vh 1vh;
+  background: white;
+  grid-area: hack_area;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-area: "hac_visuals_area" "hack_text_area";
+}
+.visuals-hack {
+  display: grid;
+  grid-gap: 1vh;
+  grid-template-rows: auto auto auto;
+}
+
+.project-vid {
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.project-pic {
+  border-radius: 25px;
+  overflow: hidden;
+  width: 560px;
+}
+
+.bullets {
+  text-align: left;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+.contact-me {
+  /*object-fit: cover;*/
+  height: 100vh;
+  /*text-justify: center;*/
+  padding-top: 0vh;
+  position: relative;
+  text-align: center;
+}
+.goodbye-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact-me p {
+  font-size: 50px;
+  color: black;
+}
+
+.contact-me p a {
+  color: black;
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  font-size: 1.5em;
+  padding: 20px;
+  background: black;
+  color: white;
+  line-height: 10px;
+  width: 100%;
+}
