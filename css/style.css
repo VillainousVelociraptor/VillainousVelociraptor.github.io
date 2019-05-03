@@ -111,15 +111,12 @@ body {
   grid-template-areas: "bpe_visuals_area bpe_text_area";
 }
 .visuals-bpe {
-  background-color:white;
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-areas: "bpe_visuals_area";
 }
 
 .desc-bpe{
-  height:100%;
-  background-color:white;
   display: grid;
   grid-template-areas: "bpe_text_area";
   align-self: start;
