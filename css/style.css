@@ -22,7 +22,6 @@ nav li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 nav li a:hover {
   color: white;
   background-color: #111;
@@ -30,11 +29,18 @@ nav li a:hover {
 }
 
 .welcome-bg {
-  background-color: white;
+  height: 100vh;
+  padding-top: 0vh;
+  background-color: pink;
   position: relative;
   text-align: center;
   color: black;
+}
+
+.wallpaper{
   object-fit: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .welcome-text {
@@ -48,40 +54,32 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-h1 {
+.welcome-text h1 {
   font-size: 5em;
   font-family: "Titillium Web", sans-serif;
 }
 
-h2 {
+.welcome-text h2 {
   text-align: center;
   font-size: 2em;
 }
 
-.intro {
-  /*top: 0;*/
-  /*background: white;*/
-  /*position: relative;*/
-  height: 100%;
-  min-height: 100vh;
-  padding-top: 10vh;
-  text-align: center;
-}
-
-.intro p {
-  font-size: 20px;
-}
-
-.my-work {
-  /*top: 0;*/
-  background: White;
+.my-work {  
+  background: white;
   padding: 5vh 10vh 1vh 10vh;
   min-height: 100vh;
   display: grid;
   font-size: 1.5em;
-  /*width: 100%;*/
-  grid-gap: 20px;
+  grid-gap: 20px; 
+  /*grid-template-columns: auto auto auto auto auto auto;*/
   grid-template-areas:
+    /*
+    "work_head"
+    "bpe_text_area bpe_visuals_area"
+    "dbz_visuals_area dbz_text_area"
+    "cave_visuals_area cave_text_area"
+    "nasa_visuals_area nasa_text_area"
+    "hack_visuals_area hack_text_area";*/
     "work_head"
     "bpe_area"
     "dbz_area"
@@ -91,7 +89,11 @@ h2 {
 }
 
 .work-header {
-  padding-top: 0vh;
+  text-align:center;
+  justify-self:center;
+  max-width: 1200px;
+  width:100%;
+  padding: 1vh 1vh 1vh 1vh;
   border-radius: 25px;
   color: white;
   grid-area: work_head;
@@ -99,20 +101,33 @@ h2 {
 }
 
 .work-bpe {
+  justify-self:center;
+  max-width: 1200px;
   padding: 1vh 1vh 1vh 1vh;
-  background: white;
-  grid-area: bpe_area;
+  background:white;
+  /*grid-area: bpe_area;*/
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-area: "bpe_visuals_area" "bpe_text_area";
+  grid-template-areas: "bpe_visuals_area bpe_text_area";
 }
 .visuals-bpe {
+  background-color:white;
   display: grid;
   grid-template-rows: auto auto auto;
-  justify-items: center;
+  grid-template-areas: "bpe_visuals_area";
+}
+
+.desc-bpe{
+  height:100%;
+  background-color:white;
+  display: grid;
+  grid-template-areas: "bpe_text_area";
+  align-self: start;
 }
 
 .work-dbz {
+  justify-self:center;
+  max-width: 1200px;
   padding: 1vh 1vh 1vh 1vh;
   border-radius: 25px;
   color: white;
@@ -120,27 +135,45 @@ h2 {
   grid-area: dbz_area;
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-area: "dbz_visuals_area" "dbz_text_area";
+  grid-template-area: "dbz_text_area dbz_visuals_area";
 }
 .visuals-dbz {
   display: grid;
   grid-template-rows: auto auto;
+  grid-template-areas: "dbz_visuals_area"; 
+}
+
+.desc-dbz{
+  display: grid;
+  grid-template-areas: "dbz_text_area";
+  align-self: start;
 }
 
 .work-cave {
+  justify-self:center;
+  max-width: 1200px;
   padding: 1vh 1vh 1vh 1vh;
   background: white;
   grid-area: cave_area;
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-area: "cave_visuals_area" "cave_text_area";
+  grid-template-areas: "cave_visuals_area cave_text_area";
 }
 .visuals-cave {
   display: grid;
   grid-template-rows: auto auto auto;
+  grid-template-areas: "cave_visuals_area";
+}
+
+.desc-cave{
+  display: grid;
+  grid-template-areas: "cave_text_area";
+  align-self: start;
 }
 
 .work-nasa {
+  justify-self:center;
+  max-width: 1200px;
   padding: 1vh 1vh 1vh 1vh;
   border-radius: 25px;
   color: white;
@@ -148,30 +181,48 @@ h2 {
   grid-area: nasa_area;
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-area: "nasa_visuals_area" "nasa_text_area";
+  grid-template-areas: "nasa_text_area nasa_visuals_area";
 }
 .visuals-nasa {
   display: grid;
   grid-template-rows: auto auto auto ;
+  grid-template-areas: "nasa_visuals_area";
+}
+
+.desc-nasa{
+  display: grid;
+  grid-template-areas: "nasa_text_area";
+  align-self: start;
 }
 
 .desc-vis-nasa{
   display :grid;
-    grid-template-rows: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "nasa_text_area";
+  align-self:start;
 }
 
 .work-hack {
+  justify-self:center;
+  max-width: 1200px;
   padding: 1vh 1vh 1vh 1vh;
   background: white;
   grid-area: hack_area;
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-area: "hac_visuals_area" "hack_text_area";
+  grid-template-areas: "hack_visuals_area hack_text_area";
 }
 .visuals-hack {
   display: grid;
   grid-gap: 1vh;
   grid-template-rows: auto auto auto;
+  grid-template-areas: "hack_visuals_area";
+}
+
+.desc-hack{
+  display: grid;
+  grid-template-areas: "hack_text_area";
+  align-self: start;
 }
 
 .project-vid {
@@ -186,6 +237,7 @@ h2 {
 }
 
 .bullets {
+  padding: 0vh 2vh 0vh 2vh;
   text-align: left;
 }
 
@@ -197,12 +249,11 @@ h4 {
 }
 
 .contact-me {
-  /*object-fit: cover;*/
   height: 100vh;
-  /*text-justify: center;*/
   padding-top: 0vh;
   position: relative;
   text-align: center;
+  background-color: pink;
 }
 .goodbye-text {
   position: absolute;
@@ -212,7 +263,7 @@ h4 {
 }
 
 .contact-me p {
-  font-size: 50px;
+  font-size: 40px;
   color: black;
 }
 
@@ -230,4 +281,115 @@ footer {
   color: white;
   line-height: 10px;
   width: 100%;
+}
+
+
+/*
+@media only screen and (max-width: 1200px){
+    .contact-me p {font-size: 20px;}
+  footer{font-size: .6em;}
+  nav ul{font-size: 1.25em;}
+  .welcome-text h1{font-size: 1.8em;}
+  .welcome-text h2{font-size: 1.1em}  
+}
+*/
+@media only screen and (max-width: 1200px) {
+  
+   .contact-me p {font-size: 20px;}
+  footer{font-size: .6em;}
+  nav ul{font-size: 1.25em;}
+  .welcome-text h1{font-size: 1.8em;}
+  .welcome-text h2{font-size: 1.1em} 
+  
+  .work-header{width: 560px}
+  
+  .my-work {
+  /*grid-template-areas: 
+    "bpe_text_area" 
+    "bpe_visuals_area"
+    
+    "dbz_text_area" 
+    "dbz_visuals_area"
+    
+    "cave_text_area" 
+    "cave_visuals_area"
+    
+    "nasa_text_area" 
+    "nasa_visuals_area"
+    
+    "hack_text_area" 
+    "hack_visuals_area";*/
+    
+  padding: 0vh 0vh 0vh 0vh;
+  grid-gap: 20px;}
+  
+   .work-bpe {
+  width: 560px;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "bpe_text_area" "bpe_visuals_area" ;}
+  
+   .work-dbz {
+  width: 560px;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "dbz_text_area" "dbz_visuals_area" ;}
+  
+    .work-cave {
+  width: 560px;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "cave_text_area" "cave_visuals_area" ;}
+  
+    .work-nasa {
+  width: 560px;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "nasa_text_area" "nasa_visuals_area" ;}
+  
+    .work-hack {
+  width: 560px;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "hack_text_area" "hack_visuals_area" ;}
+    
+}
+
+
+@media only screen and (max-width: 560px) {  
+  .contact-me p {font-size: 17px;}
+  footer{font-size: .3em;}
+  nav ul{font-size: 1em;}
+  .welcome-text h1{font-size: 1.2em;}
+  .welcome-text h2{font-size: .8em;}  
+  
+  .project-pic {width: 350px;}  
+  .project-vid iframe{width: 350px; height:197px;}
+  
+  .work-header{font-size: 25px; width: 350px} 
+  .work-bpe {width: 350px;font-size:15px} 
+  .work-dbz {width: 350px;font-size:15px;}  
+  .work-cave {width: 350px;font-size:15px}
+  .work-nasa {width: 350px;font-size:15px}  
+  .work-hack {width: 350px;font-size:15px}
+}
+
+@media only screen and (max-width: 370px) {
+  
+  .contact-me p {font-size: 17px;}
+  footer{font-size: .3em;}
+  nav ul{font-size: 1em;}
+  .welcome-text h1{font-size: 1.2em;}
+  .welcome-text h2{font-size: .8em;}  
+  
+  .project-pic {width: 300px;} 
+  .project-vid iframe{width:300px; height: 169px;}
+  
+  .work-header{font-size: 25px; width: 300px} 
+  .work-bpe {width: 300px;font-size:15px} 
+  .work-dbz {width: 300px;font-size:15px;}  
+  .work-cave {width: 300px;font-size:15px}
+  .work-nasa {width: 300px;font-size:15px}  
+  .work-hack {width: 300px;font-size:15px}
+
 }
